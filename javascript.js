@@ -1,0 +1,31 @@
+window.onload = () => {
+
+    const openPopupButton = document.querySelectorAll('[data-popup-target]')
+    const closePopupButton = document.querySelectorAll('[data-close-button ]')
+    console.log(closePopupButton)
+
+    openPopupButton.forEach(button => {
+        button.addEventListener('click', () => {
+            const popup = document.querySelector(button.dataset.popupTarget)
+            openPopup(popup)
+        })
+    })
+
+    closePopupButton.forEach(button => {
+        console.log(button.closest('.popup'))
+        button.addEventListener('click', () => {
+            const popup = button.closest('.popup')
+            closePopup(popup)
+        })
+    })
+
+    function openPopup(popup) {
+        if (popup == null) return
+        popup.classList.add('active')
+    }
+
+    function closePopup(popup) {
+        if (popup == null) return
+        popup.classList.remove('active')
+    }
+}

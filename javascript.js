@@ -1,31 +1,38 @@
-window.onload = () => {
+// window.onload = function () {
+//     const openCV = document.getElementById('open-cv');
+//     const closeCV = document.getElementById('close-cv')
 
-    const openPopupButton = document.querySelectorAll('[data-popup-target]')
-    const closePopupButton = document.querySelectorAll('[data-close-button ]')
-    console.log(closePopupButton)
 
-    openPopupButton.forEach(button => {
-        button.addEventListener('click', () => {
-            const popup = document.querySelector(button.dataset.popupTarget)
-            openPopup(popup)
-        })
+//     openCV.addEventListener('click', () => {
+//         popup = openCV.getAttribute('data-open-button')
+//         openPopup(popup)
+//     })
+//     closeCV.addEventListener('click', () => {
+//         popup = closeCV.getAttribute('data-close-button')
+//         closePopup(popup)
+//     })
+//     function openPopup(popup) {
+//         if (popup == null) return
+//         document.querySelector(popup).classList.add('active')
+//     }
+//     function closePopup(popup) {
+//         if (popup == null) return
+//         document.querySelector(popup).classList.remove('active')
+//     }
+// }
+
+$(document).ready(function () {
+    const openCV = $('#open-cv')
+    const closeCV = $('#close-cv')
+
+    openCV.click(function () {
+        var id = $(this).attr('data-open-button')
+        $(id).addClass("active")
+    })
+    closeCV.click(function () {
+        var id = $(this).attr('data-close-button')
+        $(id).removeClass("active")
     })
 
-    closePopupButton.forEach(button => {
-        console.log(button.closest('.popup'))
-        button.addEventListener('click', () => {
-            const popup = button.closest('.popup')
-            closePopup(popup)
-        })
-    })
 
-    function openPopup(popup) {
-        if (popup == null) return
-        popup.classList.add('active')
-    }
-
-    function closePopup(popup) {
-        if (popup == null) return
-        popup.classList.remove('active')
-    }
-}
+})

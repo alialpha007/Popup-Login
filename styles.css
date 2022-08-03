@@ -1,0 +1,201 @@
+body{
+    background: #FFAFBD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: sans-serif;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+/* Button */
+
+.btn{
+    background-color:white;
+    font-size: 18px;
+    color:#fe995f;
+    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.132);
+    border-radius: 5px;
+    box-shadow: 2px 1px 11px 2px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 2px 1px 11px 2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 2px 1px 11px 2px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+
+/* Login Button */
+
+.btn-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.open-btn{
+    width: 120px;
+    height: 40px;
+    transition: transform 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 1024px){
+    .open-btn:hover{
+        transform: scale(1.2);
+        box-shadow: 2px 1px 11px 10px rgba(228, 227, 227, 0.016);
+    }
+}
+
+
+/* popup */
+
+.popup{
+    width: 330px;
+    height: 410px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 2px 1px 11px 2px rgba(0,0,0,0.15);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%)  scale(0);
+    transition: 0.2s ease-in-out;
+}
+
+.popup.active{
+    transform: translate(-50%, -50%)  scale(1);
+}
+
+.popup .popup-header .close-btn{
+    position: relative;
+    left: 87%;
+    border: none;
+    background-color: #f9975ebe;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.popup .popup-header h1{
+    text-align: center;
+    padding-bottom: 30px;
+    color:#feb083;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+form label, input{
+    color: rgba(0, 0, 0, 0.434);
+}
+
+form label{
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+
+form input{
+    padding: 6px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.600);
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.434);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(0, 0, 0, 0.434);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(0, 0, 0, 0.434);
+  }
+
+  input[type=email], input[type=password]{
+      outline: none;
+      transition: 0.2s;;
+  }
+
+  input[type=email]:focus {
+    border: 2px solid #feb083;
+  }
+  input[type=password]:focus {
+    border: 2px solid #feb083;
+  }
+
+form .remember-me{
+    margin-top: 15px;
+}
+
+form .remember-me .checkbox{
+    color: #000000a8;
+    font-size: 15px;
+}
+input[type=checkbox]{
+    accent-color: #f9a371;
+  }
+
+
+
+form .sign-in-btn{
+    background-color: #feb083;
+    color: white;
+    height: 38px;
+    box-shadow: 2px 1px 11px 2px rgba(0,0,0,0.1);
+}
+
+form .forgot-password{
+    font-size: 15px;
+    color: #f7803a;
+    text-align: right;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1024px){
+    .popup{
+        width: 400px;
+        height: 420px;
+    }
+
+    .popup .popup-header .close-btn{
+        position: relative;
+        left: 89%;
+        margin: 15px 10px;
+    }
+
+    form .sign-in-btn{
+        background-color: #feb083;
+        color: white;
+        height: 38px;
+        box-shadow: 2px 1px 11px 2px rgba(0,0,0,0.012);
+        transition: transform 1s ease-in-out;
+    }
+    form .sign-in-btn:hover{
+        background-color: #fea06a;
+        
+    }
+
+    form .forgot-password{
+        transition: transform 0.7s;
+    }
+
+    form .forgot-password:hover{
+        color:#f95b00;
+    }
+}

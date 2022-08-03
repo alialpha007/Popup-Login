@@ -1,36 +1,36 @@
-// window.onload = () => {
+window.onload = () => {
 
-//     const openPopupButton = document.querySelectorAll('[data-popup-button]')
-//     const closePopupButton = document.querySelectorAll('[data-close-button]')
+    const openPopupButton = document.querySelectorAll('[data-popup-button]')
+    const closePopupButton = document.querySelectorAll('[data-close-button]')
 
-//     openPopupButton.forEach(button => {
+    openPopupButton.forEach(button => {
 
-//         button.addEventListener('click', () => {
-//             const popup = document.querySelector(button.dataset.popupButton)
-//             openPopup(popup)
-//         })
-//     })
+        button.addEventListener('click', () => {
+            const popup = document.querySelector(button.dataset.popupButton)
+            openPopup(popup)
+        })
+    })
 
-//     closePopupButton.forEach(button => {
-//         button.addEventListener('click', () => {
-//             const popup = button.closest('.popup')
-//             closePopup(popup)
-//         })
-//     })
+    closePopupButton.forEach(button => {
+        button.addEventListener('click', () => {
+            const popup = button.closest('.popup')
+            closePopup(popup)
+        })
+    })
 
-//     function openPopup(popup) {
-//         if (popup == null) return
-//         popup.classList.add('active')
+    function openPopup(popup) {
+        if (popup == null) return
+        popup.classList.add('active')
 
-//     }
+    }
 
-//     // console.log(popup.classList.add('active'))
+    // console.log(popup.classList.add('active'))
 
-//     function closePopup(popup) {
-//         if (popup == null) return
-//         popup.classList.remove('active')
-//     }
-// }
+    function closePopup(popup) {
+        if (popup == null) return
+        popup.classList.remove('active')
+    }
+}
 
 
 
@@ -89,25 +89,25 @@
 
 
 
-const openBtn = document.getElementById('open-popup')
-const closeBtn = document.getElementById('close-popup')
+// const openBtn = document.getElementById('open-popup')
+// const closeBtn = document.getElementById('close-popup')
 
-openBtn.addEventListener('click', () => {
-    popup = openBtn.getAttribute("data-open-button")
-    openPopup(popup)
-})
+// openBtn.addEventListener('click', () => {
+//     popup = openBtn.getAttribute("data-open-button")
+//     openPopup(popup)
+// })
 
-closeBtn.addEventListener('click', () => {
-    popup = closeBtn.getAttribute("data-close-button")
-    closePopup(popup)
-})
+// closeBtn.addEventListener('click', () => {
+//     popup = closeBtn.getAttribute("data-close-button")
+//     closePopup(popup)
+// })
 
-function openPopup(popup) {
-    if (popup == null) return
-    document.querySelector(popup).classList.add('active')
-}
+// function openPopup(popup) {
+//     if (popup == null) return
+//     document.querySelector(popup).classList.add('active')
+// }
 
-function closePopup(popup) {
-    if (popup == null) return
-    document.querySelector(popup).classList.remove('active')
-}
+// function closePopup(popup) {
+//     if (popup == null) return
+//     document.querySelector(popup).classList.remove('active')
+// }
